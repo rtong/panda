@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <link href="/css/hack.css" rel="stylesheet" type="text/css" media="all">
+  <head> 
+      <style>
+        #log { font-size: 50px; position: relative; }
+        #name { position: absolute; bottom: 42px; left: 233px; }
+        
+        
+      </style>
+  </head>
+  <body onload="javascript: load()">
+      <!--hidden data-->
+      <input type="hidden" name="data" value="{{ data }}" id="data"></input>
+
+      <!--Container starts-->
+      <div class="full center">
+
+          <div id="left_map">
+              <!--Logo-->
+              <div class="logo_map" id="log"><img src="/images/logo.jpg" /><h1 id="name">Panda</h1></div>
+              <!--Search box starts-->
+              <div class="searchbox">
+                  <input type="text" id="searched_text" value="" onkeyup="return gi.suggest.getSearch(event, this.value)" placeholder="Search box" class="left_center">
+              </div>
+              <!--Search box end-->
+              <div id="musicplayer"><h1>MUSIC PLAYER</h1></div>
+
+              <div id="artist"><h1>Artist Name</h1></div>
+              <div id="song_name"><h1>Song Name</h1></div>
+              <div id="quality"><h1>MUSIC PLAYER</h1></div>
+           </div>
+     </div>
+     <!--Container ends-->
+
+    {% include 'home/readme.html' %}
+    <!--JS--> <script src="/js/events.js" type="text/javascript"></script> </body>
+</html>
